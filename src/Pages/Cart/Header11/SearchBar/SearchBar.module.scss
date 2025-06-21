@@ -1,0 +1,142 @@
+.searchWrapper {
+    position: relative;
+    margin-right: 3rem;
+    flex: 1;
+    width: 100%;
+    max-width: 300px;
+
+    @container(max-width : 550px) {
+        margin-right: 0rem;
+        margin: auto;
+    }
+}
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1px 0.6rem;
+    border-radius: 20px;
+    background: white;
+    overflow: hidden;
+    padding-left: 5px;
+    position: relative;
+    margin-left: auto;
+
+    @container(max-width : 550px) {
+        margin: auto;
+    }
+
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 0.8rem;
+        transform: translateY(-50%);
+        stroke-width: 15px;
+    }
+
+    input {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: #333;
+        padding: 0.5rem 1rem;
+        padding-left: 2rem;
+        width: 100%;
+
+        &::placeholder {
+            letter-spacing: normal;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.results {
+    position: absolute;
+    top: 110%;
+    left: 0%;
+    right: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 120%;
+    overflow: hidden;
+    // padding: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 99999999;
+
+    @container(max-width : 440px) {
+        width: 150%;
+        left: -20%;
+    }
+
+    .productSearchLoader {
+        margin: 0 auto;
+        width: 1.5em;
+        height: 1.5em;
+        margin-top: 2rem;
+        border: 3px solid gainsboro;
+        border-top: 3px solid #2D3748;
+    }
+
+    // overflow: auto;
+    .resultContainer {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        flex-grow: 1;
+        min-height: 10rem;
+        max-height: 300px;
+    }
+
+
+    li {
+        padding: 0.4rem 0rem;
+        cursor: pointer;
+
+        &:hover {
+            background: #f7f3f3;
+        }
+    }
+
+    .product {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem 0.5rem;
+
+        img {
+            width: 45px;
+            height: 45px;
+            min-width: 45px;
+            aspect-ratio: auto;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .prodDetails {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .prodName {
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+
+            .prodDesc {
+                font-size: 0.75rem;
+                color: #333;
+            }
+        }
+    }
+
+    .noResults {
+        text-align: center;
+        padding: 1rem;
+        color: #333;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+}

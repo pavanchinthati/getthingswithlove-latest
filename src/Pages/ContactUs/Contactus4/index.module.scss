@@ -1,0 +1,310 @@
+.contactUsWrapper {
+    background-color: #101014;
+    color: #fff;
+    // height: 800px;
+    width: 100%;
+
+    .primaryText {
+        grid-column: 4 / span 21;
+        grid-row: 7 / span 10;
+        font-size: 2.6rem;
+        font-weight: 600;
+        animation: slideUp 1.5s ease-out forwards;
+        filter: brightness(5);
+
+        @container(max-width : 1080px){
+            font-size: 2.2rem;
+            grid-row: 7 / span 11;
+        }
+        @container(max-width : 800px) {
+            grid-row: 4 / span 5;
+            grid-column: 6 / span 40;
+            font-size: 2rem;
+            text-align: center;
+        }
+        @container(max-width : 600px){
+            font-size: 1.6rem;
+            grid-column: 4 / span 45;
+            grid-row: 4 / span 4;
+        }
+    }
+
+    .secondaryText {
+        grid-column: 4 / span 20;
+        grid-row: 19 / span 7;
+        font-size: 1.3rem;
+        font-weight: 500;
+        animation: slideUp 1.5s ease-out forwards;
+        filter: brightness(5);
+        @container(max-width : 1080px){
+            font-size: 1.1rem;
+            grid-row: 19 / span 8;
+        }
+
+        @container(max-width : 800px) {
+            grid-row: 9 / span 4;
+            grid-column: 6 / span 40;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+        @container(max-width : 600px){
+            font-size: 1rem;
+            grid-column: 4 / span 45;
+            grid-row: 9 / span 4;
+        }
+    }
+
+    .contactUsImage {
+        width: 100%;
+        height: 100%;
+        grid-column: 3 / span 46;
+        grid-row: 2 / span 38;
+        border-radius: 10px;
+        position: relative;
+        background: #101014;
+        opacity: 0.35;
+        @container(max-width : 600px){
+            grid-column: 1 / span 50;
+            border-radius: 0px;
+            grid-row: 1 / span 40;
+        }
+    }
+
+
+    .contactForm {
+        grid-column: 29 / span 19;
+        grid-row: 6 / span 31;
+        background-color: #ffff;
+        opacity: 0.95;
+        border-radius: 10px;
+        filter: brightness(1);
+        @container(max-width : 1080px){
+            grid-column: 26 / span 22;
+            grid-row: 6 / span 29;
+        }
+
+        @container(max-width : 800px) {
+            grid-column: 6 / span 40;
+            grid-row: 14 / span 23;
+        }
+        @container(max-width : 600px){
+            grid-column: 4 / span 45;
+            grid-row: 15 / span 20;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 1.5rem;
+            @container(max-width:1200px){
+                gap: 0.7rem;
+            }
+            @container(max-width:600px){
+                gap: 0.7rem;
+                padding: 1rem;
+            }
+        }
+
+        .field {
+            width: 100%;
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #101014;
+
+                @container(max-width : 600px) {
+                    font-size: 15px;
+                }
+
+                .isRequiredText {
+                    color: red;
+                }
+            }
+
+            input {
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                background-color: #FAFAFA;
+                // background-color: #ffff;
+                border: 1px solid gainsboro;
+                color: #0D121C;
+
+                @container(max-width : 600px) {
+                    padding: 8px;
+                }
+
+                &:active,
+                &:focus {
+                    border: 1px solid #0D121C;
+                }
+            }
+
+            textArea {
+                width: 100%;
+                padding: 10px;
+                font-size: 14px;
+                border-radius: 5px;
+                // background-color: transparent;
+                resize: none;
+                outline: none;
+                background-color: #FAFAFA;
+                // background-color: #ffff;
+                border: 1px solid gainsboro;
+                color: #0D121C;
+
+                &:active,
+                &:focus {
+                    border: 1px solid #0D121C;
+                }
+            }
+
+
+        }
+
+        .submitBtn {
+            border-radius: 5px;
+            padding: 8px;
+            background-color: #4C4C4F;
+            color: #fff;
+            font-weight: 600;
+            width: 100%;
+            transition: border 300ms ease;
+            border: 2px solid transparent;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        .disbaledEffect {
+            opacity: 0.5;
+        }
+
+        .successMessage {
+            color: #253551;
+            font-weight: 600;
+            font-size: 13px;
+        }
+    }
+
+}
+
+// @container(max-width : 1200px) {
+//     .contactUsWrapper {
+//         background-color: rgb(16, 16, 20);
+
+//         .primaryText {
+//             grid-column: 5 / span 38;
+//             grid-row: 9 / span 10;
+//             font-size: 2.4rem;
+//             filter: brightness(3);
+//         }
+
+//         .secondaryText {
+//             grid-column: 5 / span 36;
+//             grid-row: 20 / span 7;
+//             font-size: 1.2rem;
+//             font-weight: 500;
+//             opacity: 1;
+//             filter: brightness(3);
+//         }
+
+//         .contactUsImage {
+//             grid-column: 3 / span 46;
+//             grid-row: 2 / span 38;
+//             border-radius: 10px;
+//         }
+
+//         .bannerBtn {
+//             grid-column: 5 / span 12;
+//             grid-row: 28 / span 3;
+//         }
+//     }
+// }
+
+
+
+// @container(max-width : 700px) {
+//     .contactUsWrapper {
+//         .primaryText {
+//             grid-column: 5 / span 42;
+//             grid-row: 9 / span 10;
+//             font-size: 2rem;
+//         }
+
+//         .secondaryText {
+//             grid-column: 5 / span 42;
+//             grid-row: 20 / span 7;
+//             font-size: 1rem;
+//         }
+
+//         .bannerBtn {
+//             grid-column: 5 / span 15;
+//             grid-row: 28 / span 3;
+//         }
+//     }
+// }
+
+// @container(max-width : 550px) {
+//     .contactUsWrapper {
+//         .bannerBtn {
+//             grid-column: 5 / span 20;
+//         }
+//     }
+// }
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes letterFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* keyframes to blink the caret on/off */
+@keyframes blink {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: currentColor;
+    }
+}

@@ -1,0 +1,161 @@
+@import "@assets/Styles/Variables.scss";
+
+.CountDown-container * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.delivered-message {
+  color: rgb(143, 206, 48);
+  font-weight: 600;
+  animation: shinyText 1s 10;
+}
+
+@keyframes shinyText {
+  0% {
+    text-shadow: 0px 0px 0px rgb(199, 255, 115);
+  }
+  50% {
+    text-shadow: 5px 0px 5px rgb(199, 255, 115);
+  }
+  100% {
+    text-shadow: 0px 0px 0px rgb(199, 255, 115);
+  }
+}
+
+.CountDown-container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  @container parent-container (width <= 400px) {
+    padding: 10px; // Adjust container padding for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.CountDown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+
+  @container parent-container (width <= 400px) {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%; // Full width for mobile
+  }
+
+  img {
+    max-height: 12rem;
+    margin-bottom: 2rem;
+    width: auto;
+
+    @container parent-container (width <= 400px) {
+      max-height: 8rem; // Adjust image height for mobile
+      width: 100%; // Full width for mobile
+    }
+  }
+}
+
+.CountDown div {
+  margin: 1rem;
+  text-align: center;
+
+  @container parent-container (width <= 400px) {
+    margin: 0.5rem; // Adjust margin for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.CountDown div:first-child {
+  text-align: center;
+  width: 100%; // Full width for mobile
+}
+
+.CountDown-icon {
+  font-size: 8em;
+
+  @container parent-container (width <= 400px) {
+    font-size: 5em; // Reduce icon size for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.CountDown-container h2 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+
+  @container parent-container (width <= 400px) {
+    font-size: 1.5rem; // Adjust heading size for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.CountDown div:last-child {
+  border: 2px solid white;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  @container parent-container (width <= 400px) {
+    grid-template-columns: 1fr; // Stack items for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.CountDown-container section p:first-child,
+.CountDown div:last-child span {
+  font-size: 3rem;
+
+  @container parent-container (width <= 400px) {
+    font-size: 2rem; // Reduce font size for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.clock {
+  padding: 1rem;
+
+  @container parent-container (width <= 400px) {
+    padding: 0.5rem; // Adjust padding for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.clock p {
+  width: 4rem;
+
+  @container parent-container (width <= 400px) {
+    width: 100%; // Full width for mobile
+  }
+}
+
+.thankyou-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  @container parent-container (width <= 400px) {
+    font-size: 1rem; // Adjust text size for mobile
+    width: 100%; // Full width for mobile
+  }
+}
+
+.delivery-message {
+  padding: 0 1rem;
+
+  @container parent-container (width <= 400px) {
+    padding: 0 0.5rem; // Adjust padding for mobile
+    width: 100%; // Full width for mobile
+  }
+}

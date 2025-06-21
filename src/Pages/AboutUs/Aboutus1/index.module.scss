@@ -1,0 +1,233 @@
+.aboutUsWrapper {
+    background: #ffff;
+}
+
+/* Heading - Centered */
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    grid-column: 10 / span 30;
+    grid-row: 4 / span 2;
+
+    @container (max-width: 1024px) {
+        font-size: 18px;
+        grid-column: 6 / span 38;
+        grid-row: 6 / span 2;
+    }
+
+    @container (max-width: 768px) {
+        font-size: 16px;
+        grid-column: 6 / span 40;
+    }
+
+    @container (max-width: 450px) {
+        font-size: 12px;
+        grid-column: 3 / span 46;
+        grid-row: 2 / span 1;
+    }
+}
+
+/* Description */
+.description {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    grid-column: 10 / span 30;
+    grid-row: 8 / span 4;
+
+    @container (max-width: 1024px) {
+        grid-column: 6 / span 38;
+    }
+
+    @container (max-width: 768px) {
+        font-size: 16px;
+        grid-column: 4 / span 40;
+    }
+
+    @container (max-width: 450px) {
+        font-size: 14px;
+        grid-column: 3 / span 46;
+        grid-row: 4 / span 2;
+    }
+}
+
+/* Content Container - Cards in One Row */
+.contentContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    grid-column: 5 / span 42;
+    grid-row: 13 / span 12;
+
+    @container (max-width: 1024px) {
+        grid-column: 1 / span 50;
+        gap: 0.5rem;
+    }
+
+    @container (max-width: 768px) {
+        grid-column: 1 / span 50;
+        gap: 0rem;
+        flex-wrap: wrap;
+    }
+
+    @container (max-width: 500px) {
+        grid-column: 1 / span 50;
+        grid-row: 7 / span 10;
+        padding: 10px;
+        // flex-wrap: wrap;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+}
+
+/* Section (Cards) */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    gap: 1rem;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 230px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    @container (max-width: 1024px) {
+        grid-column: 1 / span 50;
+        gap: 0.5rem;
+    }
+}
+
+/* Section Title */
+.sectionTitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+    @container (max-width: 1024px) {
+        font-size: 1rem;
+    }
+}
+
+/* Section Text */
+.sectionText {
+    font-size: 0.9rem;
+    color: #444;
+     @container (max-width: 1024px) {
+        font-size: 1rem;
+    }
+}
+
+/* Team Heading */
+.teamHeading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #007bff;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    grid-column: 10 / span 30;
+    grid-row: 28 / span 2;
+
+    @container (max-width: 1024px) {
+        grid-column: 6 / span 38;
+    }
+
+    @container (max-width: 768px) {
+        grid-column: 4 / span 40;
+    }
+
+    @container (max-width: 450px) {
+        grid-column: 2 / span 46;
+    }
+}
+
+/* Team Container - Team Cards in One Row */
+.teamContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    grid-column: 10 / span 30;
+    grid-row: 31 / span 8;
+
+    @container (max-width: 1024px) {
+        grid-column: 1 / span 50;
+        gap: 0.5rem;
+    }
+
+    @container (max-width: 768px) {
+        grid-column: 1 / span 50;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    @container (max-width: 450px) {
+        grid-column: 1 / span 50;
+        grid-row: 33 / span 7;
+        gap: 0.3rem; // Reduced gap
+        padding: 10px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Team Member Card */
+.teamMember {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px;
+    max-width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    @container (max-width: 450px) {
+        min-width: 150px; // Smaller width for better fit
+        padding: 12px; // Reduce padding to save space
+        flex: 1 1 33%; // Distribute evenly
+    }
+}
+
+/* Team Member Name */
+.teamMemberName {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+
+    @container (max-width: 450px) {
+        font-size: 16px; // Adjust font size for small screens
+    }
+}
+
+/* Team Member Role */
+.teamMemberRole {
+    font-size: 16px;
+    color: #444;
+    font-style: italic;
+
+    @container (max-width: 450px) {
+        font-size: 14px; // Adjust font size for small screens
+    }
+}

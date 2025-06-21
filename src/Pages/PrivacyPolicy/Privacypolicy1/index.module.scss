@@ -1,0 +1,124 @@
+
+.heading {
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    grid-column: 11 / span 30;
+    grid-row: 4 / span 2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @container (max-width: 1024px) {
+        font-size: 1.7rem;
+        grid-column: 11 / span 30;
+    }
+
+    @container (max-width: 850px) {
+        font-size: 26px;
+        grid-column: 6 / span 40;
+        // grid-row: 1 / span 3;
+    }
+
+    @container (max-width: 560px) {
+        font-size: 25px;
+        grid-column: 5 / span 42;
+        // grid-row: 1 / span 3;
+    }
+}
+
+/* Description */
+.description {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.4;
+    text-align: center;
+    grid-column: 11 / span 30;
+    grid-row: 8 / span 5;
+
+    @container (max-width: 1024px) {
+        grid-column: 11 / span 30;
+    }
+
+    @container (max-width: 850px) {
+        font-size: 1rem;
+        grid-column: 6 / span 40;
+        grid-row: 7 / span 4;
+    }
+
+    @container (max-width: 560px) {
+        grid-column: 5 / span 42;
+        grid-row: 7 / span 4;
+    }
+}
+
+/* Content Container */
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    grid-column: 9 / span 35;
+    grid-row: 14 / span 22;
+    padding: 20px;
+    // background: rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+
+    @container (max-width: 1024px) {
+        grid-column: 9 / span 35;
+        grid-row: 12 / span 25;
+    }
+
+    @container (max-width: 850px) {
+        grid-column: 6 / span 40;
+        grid-row: 12 / span 25;
+        text-align: center;
+
+    }
+
+    @container (max-width: 560px) {
+        grid-column: 5 / span 42;
+        /* Fix: Ensures proper alignment */
+        grid-row: 13 / span 24;
+        gap: 0.9rem;
+        padding: 15px;
+        /* Adjust padding for better spacing */
+    }
+}
+
+/* Section - Unselectable */
+.section {
+    padding: 15px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Section Title - Styled */
+.sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 0;
+    border-bottom: 2px solid #444;
+
+    @container(max-width : 750px) {
+        font-size: 15px;
+    }
+}
+
+/* Section Text */
+.sectionText {
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+    pointer-events: none;
+    padding: 10px;
+
+    @container(max-width : 750px) {
+        font-size: 13px;
+    }
+}

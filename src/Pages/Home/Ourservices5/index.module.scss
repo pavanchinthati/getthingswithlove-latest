@@ -1,0 +1,112 @@
+/* ============================================================
+   Parent grid container: 40 cols × 30 rows
+   ============================================================ */
+.servicesWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000; /* fallback color while image loads */
+}
+
+/* ============================================================
+   Full-bleed background image
+   ============================================================ */
+.serviceImage {
+  grid-row:    1 / span 30;
+  grid-column: 1 / span 40;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   Overlay Container (heading + description)
+   ============================================================ */
+.overlayContainer {
+  /* Place from row 4 to 9  (span 6 rows), columns 25 to 38 (span 14 cols) */
+  grid-row:    6  / span 23 ;
+  grid-column: 25 / span 15;
+  backdrop-filter:    blur(6px);
+  border-radius:      12px;
+  padding:            1rem;
+
+  /* Stack heading + description vertically */
+  display:            flex;
+  flex-direction:     column;
+  gap:                0.75rem;
+
+  align-self:         start;
+  justify-self:       start;
+
+  box-shadow:         0 4px 16px rgba(0, 0, 0, 0.1);
+  @media (max-width:870px) {
+    grid-row:    6  / span 23;
+    grid-column: 18 / span 15;
+  }
+  @media (max-width:470px) {
+    grid-row:    6  / span 23;
+    grid-column: 6 / span 15;
+  }
+}
+
+/* — Heading inside overlayContainer — */
+.heading {
+  grid-row:    2  / span 3;
+  grid-column: 2 / span 10;
+  font-size:  2.5rem;
+  font-weight: 700;
+  color:      #222;
+  margin:     0;
+}
+
+/* — Description inside overlayContainer — */
+.description {
+  grid-row:    5  / span 3;
+  grid-column: 2 / span 12;
+  font-size:  1rem;
+  line-height:1.5;
+  margin:     0;
+}
+
+/* ============================================================
+   Features Container (icon list) – STILL on parent grid
+   ============================================================ */
+.featuresContainer {
+  /* Place from row 11 to 26 (span 16 rows), columns 25 to 38 (span 14 cols) */
+  grid-row:    8 / span 16;
+  grid-column: 2 / span 10;
+  border-radius:   12px;
+  padding:         1rem;
+
+  align-self:       start;
+  justify-self:     start;
+
+  /* Inside this container, lay out features in 2 columns */
+  display:          grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:1rem;
+  width:  100%;
+  height: 100%;
+}
+
+/* — Each feature row: icon + title — */
+.featureItem {
+  display:      flex;
+  align-items:  center;
+  gap:          0.5rem;
+}
+
+/* — Icon styling — */
+.featureIcon {
+  width:       1.2rem;
+  height:      1.2rem;
+  object-fit:  contain;
+}
+
+/* — Feature title text — */
+.featureTitle {
+  font-size:   1rem;
+  font-weight: 600;
+  color:       #222;
+  margin:      0;
+}

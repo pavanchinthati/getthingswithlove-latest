@@ -1,0 +1,139 @@
+ /* Layout wrapper */
+ .layout1Wrapper {
+
+   background: linear-gradient(to bottom, #111, #000);
+
+   transition: transform 0.5s ease-out, opacity 0.8s ease;
+ }
+
+ /* Heading */
+ .primaryText {
+   grid-column: 5 / span 40;
+   grid-row: 5 / span 5;
+   font-weight: 700;
+   font-size: 36px;
+   color: #f5f5f5;
+   text-align: center;
+
+   @container (max-width: 1024px) {
+     font-size: 32px;
+   }
+
+   @container (max-width: 768px) {
+     font-size: 28px;
+   }
+
+   @container (max-width: 450px) {
+     font-size: 24px;
+   }
+ }
+
+ /* Testimonials Container Wrapper */
+
+ .testimonialsCarousel {
+   grid-column: 2 / span 48;
+   grid-row: 12 / span 22;
+   padding: 1rem;
+   position: relative;
+   overflow: hidden;
+
+   @container (max-width: 450px) {
+     grid-column: 2 / span 48;
+     grid-row: 12 / span 24;
+   }
+ }
+
+ /* Flex track */
+ .carouselTrack {
+   display: flex;
+   gap: 2rem;
+   width: 100%;
+   height: 100%;
+   justify-content: center;
+   transition: transform 0.5s ease;
+   // transform: translateX(-#{100 * currentSlide}%);
+   // align-items: center;
+ }
+
+ /* Testimonial Card */
+ .testimonialCard {
+   background: #1c1e22;
+   padding: 1.5rem;
+   border-radius: 15px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+   text-align: center;
+   transition: transform 0.3s ease;
+   // flex: 0 0 33.333%; // three cards per view
+   flex: 1;
+   max-width: 350px;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   justify-content: center;
+   align-items: center;
+
+   &:hover {
+     transform: translateY(-2px);
+   }
+
+   .image {
+     width: 80px;
+     height: 80px;
+     object-fit: cover;
+     border-radius: 50%;
+     margin-bottom: 1rem;
+     border: 2px solid #fff;
+   }
+
+   .quote {
+     font-style: italic;
+     color: #ccc;
+     font-size: 16px;
+     margin: 0.5rem 0;
+     padding-bottom: 1rem;
+   }
+
+   .name {
+     font-weight: bold;
+     color: #fff;
+     font-size: 18px;
+     margin-top: 0.5rem;
+   }
+
+   .designation {
+     color: #999;
+     font-size: 14px;
+   }
+ }
+
+ .slider {
+   display: flex;
+   justify-content: center;
+   margin: auto;
+   margin-top: 2rem;
+   height: 20px;
+   width: 100px;
+   z-index: 111;
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+
+   .activeDot {
+     background-color: #fff;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     cursor: pointer;
+     // opacity: 1;
+   }
+
+   .inactiveDot {
+     background-color: #fff;
+     height: 10px;
+     width: 10px;
+     border-radius: 50%;
+     cursor: pointer;
+     opacity: 0.3;
+   }
+ }

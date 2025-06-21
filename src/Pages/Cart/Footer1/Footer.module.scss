@@ -1,0 +1,85 @@
+.footerWrapper{
+    padding: 15px;
+    background-color: #000000;
+    color: #707070;
+    width: 100%;
+
+    .columnsContainer{
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        width: 100%;
+    }
+    .companyName{
+        padding: 10px 2px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .firstColumn,.secondColumn,.thirdColumn{
+        flex: 1;
+        display: flex;
+        width: 100% !important;
+        flex-direction: column;
+        gap: 2px;
+        max-width: 500px;
+        align-items: flex-start;
+        padding: 0.5rem;
+        
+    }
+
+    .firstColumn{
+        font-size: 13px;
+        font-weight: 500;
+        flex: 2;
+    }
+    // .thirdColumn{
+    //     padding: 1rem 0.5rem;
+    // }
+    .columnHeading{
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+        padding: 3px 5px;
+    }
+    .columnDescription{
+        padding: 5px;
+    }
+
+    .linksContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        padding: 5px 10px;
+        min-width: 100px;
+        
+        a{
+            color: #707070;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 300ms;
+
+            &:hover{
+                color: gainsboro;
+            }
+        }
+    }
+}
+
+
+@container(width <= 800px){
+    .columnsContainer{
+        gap: 50px !important; 
+    }
+}
+@container(width <= 560px){
+    .columnsContainer{
+        flex-wrap: wrap;
+        gap: 30px !important;
+        .firstColumn{
+            width: 100%;
+            flex: none;
+        }
+    }
+}

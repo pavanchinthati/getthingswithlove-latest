@@ -1,0 +1,186 @@
+.showCaseWrapper {
+    .showCaseHeading {
+        grid-column: 12 / span 30;
+        grid-row: 4 / span 4;
+        font-size: 2.4rem;
+        color: #333;
+        font-weight: 600;
+        text-align: center;
+
+        @container(max-width : 1200px) {
+            font-size: 2rem;
+            grid-column: 9 / span 35;
+        }
+
+        @container(max-width : 800px) {
+            grid-row: 3 / span 3;
+        }
+        @container(max-width : 600px){
+            grid-row: 3 / span 3;
+            grid-column: 6 / span 40;
+            font-size: 1.8rem;
+        }
+    }
+
+    .showCaseDescription {
+        grid-column: 12 / span 30;
+        grid-row: 8 / span 6;
+        font-size: 1.5rem;
+        color: gray;
+        text-align: center;
+
+        @container(max-width : 1200px) {
+            font-size: 1.2rem;
+            grid-column: 9 / span 35;
+            grid-row: 8 / span 5;
+        }
+
+        @container(max-width : 800px) {
+            grid-column: 8 / span 37;
+            grid-row: 6 / span 4;
+        }
+        @container(max-width : 600px){
+            grid-row: 6 / span 3;
+            grid-column: 6 / span 40;
+            font-size: 1rem;
+        }
+    }
+
+    .showCaseContainer {
+        grid-column: 5 / span 40;
+        grid-row: 16 / span 20;
+        background-color: #E9ECF2;
+        // padding: 1.5rem;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+
+        @container(max-width : 1200px) {
+            grid-column: 4 / span 45;
+            grid-row: 14 / span 20;
+        }
+        @container(max-width : 800px){
+            grid-row: 10 / span 25;
+        }
+
+        @container(max-width : 600px){
+            grid-row: 10 / span 25;
+        }
+        .carouselTrack {
+            display: flex;
+            gap: 0rem;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .showCaseItem {
+            display: flex;
+            gap: 3rem;
+            height: 100%;
+            // min-width: 100%;
+            flex: 0 0 100%;
+            box-sizing: border-box;
+            padding: 1.5rem;
+            @container(max-width : 800px){
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            img {
+                flex: 1;
+                max-width: 400px;
+                border-radius: 10px;
+                
+                @container(max-width : 1200px) {
+                    max-width: 350px;
+                }
+                @container(max-width : 800px){
+                    max-height: 300px;
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+
+            .content {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                width: 100%;
+                // max-width: 500px;
+
+                h3 {
+                    color: black;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+
+                    @container(max-width : 1200px) {
+                        font-size: 2rem;
+                    }
+                }
+
+                span {
+                    font-size: 1.2rem;
+                    color: gray;
+
+                    @container(max-width : 1200px) {
+                        font-size: 1rem;
+                    }
+                }
+
+                .tags {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                    margin-top: 1.5rem;
+
+                    .tag {
+                        padding: 5.5px 15px;
+                        border-radius: 20px;
+                        display: flex;
+                        align-items: center;
+                        background-color: #333;
+
+                        span {
+                            font-size: 0.8rem;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    .slider {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 4rem;
+        height: 20px;
+        width: 100px;
+        z-index: 111;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .activeDot {
+            background-color: black;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            // opacity: 1;
+        }
+
+        .inactiveDot {
+            background-color: gray;
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            opacity: 0.3;
+        }
+    }
+}

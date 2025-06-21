@@ -1,0 +1,184 @@
+.imagesSection {
+    display: flex;
+    gap: 0.7rem;
+    margin-top: 0.5rem;
+    height: 100%;
+    max-height: 360px;
+
+    .allImages {
+        flex: 1;
+        max-width: 5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        height: 100%;
+        max-height: 400px;
+        overflow: hidden;
+        align-items: center;
+        position: relative;
+
+        .slideUp,
+        .slideDown {
+            background-color: #333;
+            opacity: 0.8;
+            color: #ffff;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2px;
+            transition: all 300ms;
+            display: none;
+
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            svg {
+                height: 25px;
+                width: 25px;
+            }
+
+        }
+
+        .slideUp {
+            top: 0rem;
+        }
+
+        .slideDown {
+            bottom: 0rem;
+        }
+
+        img {
+            height: 50px;
+            width: 100%;
+            min-height: 60px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .selectedImage {
+            border: 2px solid #111111;
+        }
+    }
+
+    .imageCarousel {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        gap: 0rem;
+        flex: 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .sliders {
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+
+            .slideLeft,
+            .slideRight {
+                cursor: pointer;
+                background-color: #fff;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 300ms;
+                color: #111111;
+
+                &:hover {
+                    background-color: rgba(#0000, 0.15);
+                }
+            }
+        }
+    }
+
+}
+
+.productDetails {
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    .priceDetails {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+
+        .mrp {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .sellingPrice {
+            font-weight: 600;
+            font-size: 1rem;
+        }
+    }
+
+    .productName {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .productDescription {
+        font-size: 0.85rem;
+        color: gray;
+        font-weight: 500;
+    }
+
+    .categoriesList {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        button {
+            background-color: rgba(#db5b3f, 0.7);
+            padding: 3px 0.8rem;
+            font-size: 0.85rem;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 300ma;
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+
+.productModalCartBtn{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    button{
+        color: #fff;
+        border-radius: 5px;
+        width: 10rem;
+        height: 2.5rem;
+        p{
+            color: #fff;
+        }
+    }
+}

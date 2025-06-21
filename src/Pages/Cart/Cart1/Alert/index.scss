@@ -1,0 +1,22 @@
+.alert-message{
+    background-color: #EED202;
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #5d5c5c;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+
+    .alert-text{
+        width: 90%;
+        text-align: center;
+    }
+    .alert-cross{
+        width: 10%;
+        text-align: end;
+        cursor: pointer;
+    }
+}

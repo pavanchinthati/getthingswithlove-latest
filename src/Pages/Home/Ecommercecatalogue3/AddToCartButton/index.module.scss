@@ -1,0 +1,65 @@
+.addedToCartBtn {}
+
+.isLoading {
+    pointer-events: none;
+}
+
+.cartBtn {
+    .addToCartBtn>span {
+        border-width: 3px;
+        width: 1.6em;
+        height: 1.6em;
+    }
+
+    button {
+        background-color: #111111;
+        cursor: pointer;
+        color: #fff;
+        width: 8rem;
+        height: 2.25rem;
+        font-size: 0.85rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 300ms;
+        min-width: 5.5rem;
+        display: flex;
+        justify-content: center;
+        line-height: 2.5rem;
+
+        p {
+            display: inline;
+            margin-bottom: 0;
+            // padding-bottom: 2px;
+            font-weight: 600;
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        svg {
+            scale: 1.2;
+        }
+    }
+
+    .addedToCartBtn {
+        // align-items: center;
+        justify-content: space-evenly;
+        .quantity{
+            font-size: 1rem;
+        }
+        &:hover{
+            opacity: 1;
+        }
+        .incrementBtn:hover{
+            color: green;
+        }
+        .decrementBtn:hover{
+            color: red;
+        }
+    }
+}
+
+.addToCartBtn {}

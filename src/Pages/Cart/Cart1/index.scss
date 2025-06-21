@@ -1,0 +1,131 @@
+@import "@assets/Styles/Variables.scss";
+
+.checkout-container {
+  background-color: #f2f2f2;
+  padding: 4rem 2rem;
+
+  @container(max-width : 500px) {
+    padding: 1.5rem;
+  }
+
+  .checkout-address-wrapper {
+    width: 100%;
+    margin-left: 0rem;
+  }
+
+  .checkout-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+
+  .checkout-button {
+    display: flex;
+    width: 10rem;
+    justify-content: center;
+    text-align: center;
+    margin: 4rem auto 0 auto;
+
+    button {
+      background-color: rgb(16, 16, 20);
+      border-radius: 6px;
+      font-weight: 600;
+      padding: 0.7rem 1.2rem;
+      border: 2px solid transparent;
+      transition: all 300ms;
+      color: #fff;
+      font-size: 0.95rem;
+
+      &:hover {
+        color: rgb(16, 16, 20);
+        border-color: rgb(16, 16, 20);
+        background-color: #fff;
+      }
+    }
+  }
+
+  .wallet-btn {
+    // Add wallet button styles here
+  }
+
+  .wallet-selected {
+    // Add selected wallet styles here
+  }
+
+  .wallet-disabled {
+    // Add disabled wallet styles here
+  }
+
+  .modal-loader {
+    padding: 10px;
+    display: flex;
+    width: fit-content;
+  }
+
+  .modal-button-loader {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 200%;
+    border: 1px $black solid;
+    border-bottom: none;
+    margin-left: 14px;
+    display: flex;
+    margin-top: 7px;
+    animation: loading 1s infinite linear;
+  }
+
+  .modal-message {
+    text-align: center;
+    padding-left: 5px;
+    display: flex;
+  }
+
+
+  /* Remove existing media queries using viewport width */
+
+  /* Container query targeting a parent width <= 400px */
+}
+
+@container(max-width: 900px) {
+  .checkout-container {
+
+    // padding: 1.5rem !important;
+    /* Adjust padding for smaller screens */
+    .checkout-wrapper {
+      flex-direction: column;
+      /* Stack elements vertically */
+      justify-content: center;
+
+      .checkout-product-wrapper {
+        padding: 20px;
+        width: 100%;
+        margin: 0;
+
+        .checkout-product-details {
+          min-width: 0;
+          margin-right: 30px;
+        }
+      }
+
+      .checkout-address-wrapper {
+        width: 100%;
+
+        .address-form {
+          input {
+            width: 100%;
+            /* Ensure form inputs take full width on smaller screens */
+          }
+        }
+      }
+    }
+  }
+
+
+  .checkout-button {
+    width: 100%;
+    /* Make button take full width on smaller screens */
+    margin: 2rem auto;
+  }
+}

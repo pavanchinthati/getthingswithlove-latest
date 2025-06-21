@@ -1,0 +1,93 @@
+.categoryWrapper {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    padding: 2rem 1.5rem;
+    gap: 0rem;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+
+    @container(max-width : 600px) {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .categoryDisplaySection {
+        flex: 1;
+        max-width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+        @container(max-width : 600px){
+            max-width: unset;
+            width: 100%;
+            overflow: auto;
+        }
+        h5{
+            // color: rgb(219, 91, 63);
+            color: #333;
+            font-size: 1.1rem;
+            font-weight: 600;
+            @container(max-width:600px){
+                display: none;
+            }
+            // border-bottom: 1px solid gray;
+            // text-decoration: underline;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap:0rem;
+            justify-content: center;
+            @container(max-width:600px){
+                flex-direction: row;
+            }
+            li {
+                list-style-type: none;
+                font-size: 0.9rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 300ms;
+                padding: 5px 10px;
+                @container(max-width:600px){
+                    white-space: nowrap;
+                }
+    
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+    
+            .activeCategory {
+                color: rgb(219, 91, 63);
+                // background-color: gainsboro;
+                @container(max-width : 600px){
+                    border-bottom: 1.5px solid rgb(219, 91, 63);
+                }
+            }
+        }
+    }
+
+    .productsListWrapper {
+        flex: 1;
+        flex-grow: 1;
+        display: grid;
+        column-gap: 0.8rem;
+        row-gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        height: 100%;
+        // overflow: auto;
+        place-items: center;
+        // padding: 0.5rem;
+    }
+}
+
+.skeleton{
+    .categoryDisplaySection{
+        *{
+            opacity: 0;
+        }
+    }
+}
